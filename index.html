@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motion Styles: 16 visual languages of motion design</title>
+  <meta name="description" content="A field guide to 16 motion design styles, each shown as a seamless looping animation made in After Effects and Blender." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#styles">Skip to the styles</a>
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Motion Styles, back to top">Motion Styles<span>16</span></a>
+    <nav aria-label="Page sections">
+      <a href="#styles">Styles</a>
+      <a href="#about">Process</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A field guide to motion design</p>
+        <h1 id="hero-title">Sixteen ways <em>to move</em> a frame.</h1>
+        <p class="lede">Every motion style starts as graphic design: a palette, a shape language, a type voice. Then it adds its own rules for timing and movement. Each style below is a seamless loop made in After Effects or Blender.</p>
+        <a class="cta" href="#styles">Explore the styles</a>
+      </div>
+      <div class="hero-reel" aria-hidden="true">
+        <video data-src="videos/web/07-synthwave.mp4" poster="posters/07-synthwave.jpg" muted loop playsinline></video>
+        <video data-src="videos/web/06-y2k-chrome.mp4" poster="posters/06-y2k-chrome.jpg" muted loop playsinline></video>
+        <video data-src="videos/web/02-pop-art.mp4" poster="posters/02-pop-art.jpg" muted loop playsinline></video>
+      </div>
+    </section>
+
+    <section id="styles" class="styles" aria-labelledby="styles-title">
+      <div class="section-head">
+        <h2 id="styles-title">The styles <span id="count" class="count"></span></h2>
+        <div class="filters" role="group" aria-label="Filter styles by family">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="graphic" aria-pressed="false">Graphic</button>
+          <button type="button" class="chip" data-filter="3d" aria-pressed="false">3D</button>
+          <button type="button" class="chip" data-filter="retro" aria-pressed="false">Retro</button>
+          <button type="button" class="chip" data-filter="print" aria-pressed="false">Print</button>
+        </div>
+      </div>
+      <ol class="grid" id="grid"></ol>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 id="about-title">How these were made</h2>
+      <div class="about-cols">
+        <p><strong>After Effects (12 styles).</strong> Built from shape layers, expressions and effects, with every move timed to a 6-second cycle so the loop never visibly restarts.</p>
+        <p><strong>Blender (4 styles).</strong> Clay 3D, Y2K Chrome, Isometric and Low Poly were modelled, lit and rendered in Blender, then encoded for the web.</p>
+        <p><strong>The web.</strong> Videos load only when they scroll into view and pause when they leave. With reduced motion turned on, nothing autoplays.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Motion Styles. Made with After Effects, Blender and plain HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+    <video id="viewer-video" muted loop playsinline controls></video>
+    <div class="viewer-copy">
+      <p class="viewer-meta" id="viewer-meta"></p>
+      <h3 id="viewer-title"></h3>
+      <p id="viewer-text"></p>
+    </div>
+  </dialog>
+
+  <script src="styles-data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Full-quality renders are regenerated from ae/ and blender/ (web copies live in videos/web)
+videos/*.mp4
+blender/frames/
+*.blend1
+__pycache__/
+ae/*Logs*/
